@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_entries -> loadFragment(HomeFragment())
                 R.id.nav_jump -> loadFragment(JumpFragment())
                 R.id.nav_settings -> loadFragment(SettingsFragment())
-                R.id.nav_new -> loadFragment(NewEntryFragment())
             }
             true
         }
