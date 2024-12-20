@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.nibm.mydiaryapp"
+    namespace = "com.amarnafais.diaryapp"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.nibm.mydiaryapp"
+        applicationId = "com.amarnafais.diaryapp"
         minSdk = 29
         targetSdk = 34
         versionCode = 1
@@ -34,9 +34,7 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-
     buildFeatures {
-        //noinspection DataBindingWithoutKapt
         dataBinding = true
         viewBinding = true
     }
@@ -49,10 +47,12 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.gridlayout)
-    implementation(libs.room.runtime)
-    implementation(libs.support.annotations)
+    implementation(libs.androidx.recyclerview)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.room.ktx)
     implementation(libs.kotlinx.coroutines.android)
-    kapt(libs.room.compiler) // KAPT for Room compiler
+    implementation(libs.support.annotations)
+    kapt(libs.room.compiler)
 }
